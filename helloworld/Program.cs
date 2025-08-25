@@ -66,7 +66,7 @@ class Program
         //{
         //    Console.WriteLine((i + 1) + "." + numbers[i]);
         //}
-        
+
         // Dynamic array in c#
         //List<string> names = new List<string> { "Res", "Shem" };
         //names.Add("bawbaw");
@@ -74,11 +74,26 @@ class Program
         //    Console.WriteLine(n);
 
 
+        // Stacks
 
+        Stack<int> stack = new Stack<int>();
 
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
 
+        foreach (var n in stack)
+        {
+            Console.WriteLine(n);
+        }
 
-
+        Console.WriteLine("Remove the top ");
+        stack.Pop();
+        foreach (var n in stack)
+        {
+            Console.WriteLine(n);
+        }
+            
     }
 }
 
