@@ -76,24 +76,44 @@ class Program
 
         // Stacks
 
-        Stack<int> stack = new Stack<int>();
+        //Stack<int> stack = new Stack<int>();
 
-        stack.Push(1);
-        stack.Push(2);
-        stack.Push(3);
+        //stack.Push(1);
+        //stack.Push(2);
+        //stack.Push(3);
 
-        foreach (var n in stack)
+        //foreach (var n in stack)
+        //{
+        //    Console.WriteLine(n);
+        //}
+
+        //Console.WriteLine("Remove the top ");
+        //stack.Pop();
+        //foreach (var n in stack)
+        //{
+        //    Console.WriteLine(n);
+        //}
+
+
+        // Sorting Alogrithm using bubble sort
+
+        int[] arr = { 5, 3, 51, 42, 12 };
+
+        for (int i = 0; i < arr.Length - 1; i++)
         {
-            Console.WriteLine(n);
+            if (arr[i] > arr[i + 1]) 
+            {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
         }
 
-        Console.WriteLine("Remove the top ");
-        stack.Pop();
-        foreach (var n in stack)
-        {
-            Console.WriteLine(n);
-        }
-            
+        foreach (int num in arr)
+            Console.WriteLine(num);
+
+
+
     }
 }
 
