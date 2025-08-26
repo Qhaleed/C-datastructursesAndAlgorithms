@@ -97,21 +97,28 @@ class Program
 
         // Sorting Alogrithm using bubble sort
 
-        int[] arr = { 5, 3, 51, 42, 12 };
+        int[] num = { 54, 1, 2, 342, 5, 67 };
 
-        for (int i = 0; i < arr.Length - 1; i++)
+
+        // Now we need to bubble sort this shi
+        foreach (var n in num)
+            Console.WriteLine(n);
+
+        for (int i = 0; i < num.Length - 1; i++)
         {
-            if (arr[i] > arr[i + 1]) 
+            for (int j = 0; j < num.Length - i - 1; j++)
             {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
+                if (num[j] > num[j+ 1])
+                {
+                    int temp = num[j + 1];
+                    num[j + 1] = num[j];
+                    num[j] = temp;
+                }
+                
             }
         }
-
-        foreach (int num in arr)
-            Console.WriteLine(num);
-
+        foreach (var n in num)
+            Console.WriteLine(n);
 
 
     }
